@@ -1,6 +1,7 @@
 name: conda-ai
 channels:
   - conda-forge
+  - defaults
 dependencies:
   - _openmp_mutex=4.5=2_gnu
   - alembic=1.16.4=pyhd8ed1ab_0
@@ -215,10 +216,13 @@ dependencies:
       - dataclasses-json==0.6.7
       - deprecated==1.2.18
       - dirtyjson==1.0.8
+      - filelock==3.18.0
       - filetype==1.2.0
       - frozenlist==1.7.0
       - fsspec==2025.5.1
       - griffe==1.7.3
+      - hf-xet==1.1.5
+      - huggingface-hub==0.33.4
       - jiter==0.10.0
       - joblib==1.5.1
       - llama-cloud==0.1.32
@@ -231,6 +235,8 @@ dependencies:
       - llama-index-indices-managed-llama-cloud==0.7.10
       - llama-index-instrumentation==0.2.0
       - llama-index-llms-openai==0.4.7
+      - llama-index-llms-openai-like==0.4.0
+      - llama-index-llms-openrouter==0.3.2
       - llama-index-multi-modal-llms-openai==0.5.3
       - llama-index-program-openai==0.3.2
       - llama-index-question-gen-openai==0.3.1
@@ -251,11 +257,14 @@ dependencies:
       - pypdf==5.8.0
       - python-dotenv==1.1.1
       - regex==2024.11.6
+      - safetensors==0.5.3
       - striprtf==0.0.26
       - tenacity==9.1.2
       - tiktoken==0.9.0
+      - tokenizers==0.21.2
+      - transformers==4.53.2
       - typing-inspect==0.9.0
       - tzdata==2025.2
       - wrapt==1.17.2
       - yarl==1.20.1
-prefix: /opt/conda
+prefix: /opt/conda/envs/conda-ai
