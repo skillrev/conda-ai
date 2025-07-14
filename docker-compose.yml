@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  jupyter:
+    build: .
+    container_name: jupyter_lab_container
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/home/jovyan/conda-ai
+      - ./.jupyter/jupyter_notebook_config.py:/home/jovyan/.jupyter/jupyter_notebook_config.py
+    working_dir: /home/jovyan/conda-ai
