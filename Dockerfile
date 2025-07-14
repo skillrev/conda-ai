@@ -2,7 +2,8 @@ FROM quay.io/jupyter/minimal-notebook:python-3.12
 
 WORKDIR /home/jovyan/conda-ai
 COPY environment.yml environment.yml
-RUN conda env create -f environment.yml
+RUN conda env create -f environment.yml && \
+  conda config --add channels defaults
 
 # docker equivalent of "conda activate" command
 ENV PATH /opt/conda/envs/conda-ai/bin:$PATH
