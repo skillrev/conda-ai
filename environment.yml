@@ -1,4 +1,4 @@
-name: base
+name: conda-ai
 channels:
   - conda-forge
 dependencies:
